@@ -32,7 +32,7 @@ class Agent(object):
         self.vision_model = vision_model
         self.task = task
         
-        if vision_model in ('gpt-4-vision-preview', 'gpt-4'):
+        if vision_model in ('gpt-4-vision-preview', 'gpt-4', 'gpt-4-turbo', 'gpt-4o-mini',  "o1-preview", "o1-mini"):
             # using the open ai key.
             logger.info(f"creating GPT-based agent of type: {vision_model}")
             if isinstance(api_key, KeyChain):
